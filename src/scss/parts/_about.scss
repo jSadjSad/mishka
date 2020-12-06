@@ -1,0 +1,119 @@
+.about {
+  margin: 0 30px;
+  padding: 40px 0;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
+    padding: 87px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 110px 175px;
+  }
+}
+
+.about__title {
+  @include text-bold();
+  font-size: 25px;
+  line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.about__text-list {
+  @include ul();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    height: 500px;
+  }
+}
+
+.about__text-item {
+  @include text-bold();
+  position: relative;
+  width: 100%;
+  min-height: 123px;
+  padding-top: 82px;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 55px;
+    height: 51px;
+    left: -4px;
+    top: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    min-height: 154px;
+    padding-top: 100px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before {
+      top: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 155px;
+    padding-top: 95px;
+
+    &::before {
+      top: 30px;
+    }
+  }
+}
+
+.about__text-item:nth-child(1)::before {
+  background-image: url("../img/about-icon_1.svg");
+  background-size: 33px 38px;
+}
+
+.about__text-item:nth-child(2)::before {
+  background-image: url("../img/about-icon_2.svg");
+  background-size: 47px 27px;
+}
+
+.about__text-item:nth-child(3)::before {
+  background-image: url("../img/about-icon_3.svg");
+  background-size: 36px 29px;
+}
+
+.about__text-item:nth-child(4)::before {
+  background-image: url("../img/about-icon_4.svg");
+  background-size: 33px 33px;
+}
+
+.about__text-item:nth-child(5)::before {
+  left: -6px;
+  background-image: url("../img/about-icon_5.svg");
+  background-size: 55px 23px;
+}
+
+.about__text-item:nth-child(6)::before {
+  background-image: url("../img/about-icon_6.svg");
+  background-size: 33px 32px;
+}

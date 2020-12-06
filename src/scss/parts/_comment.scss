@@ -1,0 +1,115 @@
+.comment {
+  margin: 17px 30px;
+  overflow: hidden;
+}
+
+.comment__title {
+  @include text-bold();
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.comment__list {
+  width: 200%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.comment__wrapper {
+  width: 100%;
+}
+
+.comment__text {
+  @include text();
+  font-size: 15px;
+  line-height: 30px;
+  margin: 15px 0 30px;
+}
+
+.comment__author {
+  @include text-bold();
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.comment__author-address {
+  @include text();
+  font-size: 17px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.comment__controls {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+  border: 1px $color-grey-border solid;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: $color-grey-border;
+  }
+}
+
+.comment__control-arrow {
+  position: relative;
+  width: 50%;
+  height: 50px;
+  border: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active :focus {
+    opacity: 0.3;
+    outline: 0;
+  }
+}
+
+.comment__control-arrow--backward {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 50px;
+    height: 26px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 26px;
+  }
+}
+
+.comment__control-arrow--forward {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    display: block;
+    width: 50px;
+    height: 26px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 26px;
+  }
+}

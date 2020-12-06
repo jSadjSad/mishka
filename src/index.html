@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header page-header--opened">
+    <header class="page-header page-header--closed no--js">
       <button type="button" class="page-header__toggle page-header__toggle--close">
         <span class="visually-hidden">Открыть-закрыть меню</span>
       </button>
@@ -52,7 +52,7 @@
               </svg>
             </a>
             <p class="page-header__cart-text">
-              Корзина пока пуста
+              Корзина:&nbsp;пока&nbsp;пуста
             </p>
           </div>
         </div>
@@ -98,14 +98,16 @@
         </ul>
       </section>
       <section class="feature">
-        <h2 class="feature__title">
-          Вязаные корзинки
-        </h2>
-        <p class="feature__subtitle">
-          Товар недели
-        </p>
+        <div class="feature__title-wrapper">
+          <h2 class="feature__title">
+            Вязаные корзинки
+          </h2>
+          <p class="feature__subtitle">
+            Товар недели
+          </p>
+        </div>
         <p class="feature__text">
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+          Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.
         </p>
         <table class="feature__properties">
           <tr>
@@ -121,65 +123,85 @@
             <td>15 см</td>
           </tr>
         </table>
-        <div class="feature__image"></div>
-        <p class="feature__price">
-          Цена: 990 руб.
-        </p>
-        <a href="#" class="feature__price-btn btn">
-          Заказать
-        </a>
+        <div class="feature__image-wrapper">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <source media="(min-width: 394px)" srcset="img/triple-set-mobile@1x.jpg">
+            <img src="img/triple-set-tablet@1x.jpg" width="260" height="315" alt="Набор из трех вязаных корзинок">
+          </picture>
+        </div>
+        <div class="feature__order">
+          <p class="feature__order-price">
+            Цена: 990 руб.
+          </p>
+          <a href="#" class="feature__order-btn btn">
+            Заказать
+          </a>
+        </div>
       </section>
-      <section class = "about">
+      <section class="about">
         <h2 class="about__title">
-          Коротко о нас
+          Коротко о нас:
         </h2>
-        <ul class = "about__text-list">
-          <li class = "about__text-item">
-            Экологически чистые материалы
+        <ul class="about__text-list">
+          <li class="about__text-item">
+            Экологически чистые<br>материалы
           </li>
-          <li class = "about__text-item">
-            Скандинавский стиль по российской цене
+          <li class="about__text-item">
+            Скандинавский стиль<br>по&nbsp;российской цене
           </li>
-          <li class = "about__text-item">
-            Увеличивает лайки на фотографиях
+          <li class="about__text-item">
+            Увеличивает лайки<br>на&nbsp;фотографиях
           </li>
-          <li class = "about__text-item">
-            Связано вручную с любовью и умилением
+          <li class="about__text-item">
+            Связано вручную<br>с любовью и&nbsp;умилением
           </li>
-          <li class = "about__text-item">
-            Поддержка отечественного производителя
+          <li class="about__text-item">
+            Поддержка отечественного<br>производителя
           </li>
-          <li class = "about__text-item">
-            Поставляется в подарочной упаковке
+          <li class="about__text-item">
+            Поставляется<br>в подарочной упаковке
           </li>
         </ul>
       </section>
-      <section class = "comments">
-      <h2 class="comments__title">
-        Отзывы
-      </h2>
-      <article class="comments__wrapper">
-        <p class="comments__text">
-          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-        </p>
-        <p class="comments__author">
-          Анастасия Красильникова
-        </p>
-        <a href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
-        <div class="comments__controls">
-          <button type="button" name="button" class="comments__control-arrow comments__control-arrow--forward">
+      <section class="comment">
+        <h2 class="comment__title">
+          Отзывы
+        </h2>
+        <div class="comment__list">
+          <article class="comment__wrapper">
+            <p class="comment__text">
+              Я молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как&nbsp;у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!
+            </p>
+            <p class="comment__author">
+              Анастасия Красильникова
+            </p>
+            <a class="comment__author-address" rel="author" href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
+          </article>
+          <article class="comment__wrapper">
+            <p class="comment__text">
+              Второй короткий комментарий
+            </p>
+            <p class="comment__author">
+              Маша Иванова
+            </p>
+            <a rel="author" href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
+          </article>
+        </div>
+        <div class="comment__controls">
+          <button type="button" name="button" class="comment__control-arrow comment__control-arrow--backward">
             <span class="visually-hidden">
               Вперед
             </span>
           </button>
-          <button type="button" name="button" class="comments__control-arrow comments__control-arrow--backward">
+          <button type="button" name="button" class="comment__control-arrow comment__control-arrow--forward">
             <span class="visually-hidden">
               Назад
             </span>
           </button>
         </div>
-      </article>
-        <a href="#" class="comments__write-button"></a>
+        <a href="#" class="comment__write-button">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">
@@ -195,7 +217,7 @@
           <table class="contacts__address">
             <tr>
               <td>адрес:</td>
-              <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+              <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
             </tr>
           </table>
         </div>
@@ -228,5 +250,6 @@
         <span class="page-footer__copyright-text">Разработано</span>
       </a>
     </footer>
+    <script src="js/main-nav.js"></script>
   </body>
 </html>
