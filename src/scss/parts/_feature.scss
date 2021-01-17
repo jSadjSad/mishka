@@ -1,7 +1,7 @@
 .feature {
   position: relative;
   display: grid;
-  margin: 32px 30px;
+  margin: 31px 30px;
 
   &::after {
     content: "";
@@ -9,7 +9,7 @@
     position: absolute;
     width: calc(100% + 60px);
     height: 6px;
-    bottom: -36px;
+    bottom: -42px;
     left: 50%;
     transform: translateX(-50%);
     background-image: url("../img/zigzag-line-mobile.svg");
@@ -19,11 +19,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    height: 504px;
+    height: 505px;
     grid-template-columns: 1fr 334px;
-    grid-template-rows: 90px auto auto auto;
+    grid-template-rows: 89px 123px auto auto;
     column-gap: 42px;
-    margin: 40px 50px;
+    margin: 40px 50px 67px;
 
     &::after {
       content: "";
@@ -39,14 +39,14 @@
     width: 1050px;
     height: 636px;
     grid-template-columns: 1fr 525px;
-    grid-template-rows: 153px 140px auto auto;
+    grid-template-rows: 154px 140px auto auto;
     column-gap: 58px;
     margin: 55px auto;
 
     &::after {
-      width: 100%;
+      width: 1050px;
       height: 23px;
-      bottom: -73px;
+      bottom: -95px;
       background-image: url("../img/zigzag-line-desktop.svg");
       background-size: 1050px 23px;
     }
@@ -108,7 +108,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 175px;
+    width: 172px;
     margin-left: 0;
     padding: 10px 40px 0 30px;
   }
@@ -177,7 +177,7 @@
 .feature__image-wrapper {
   width: 100%;
   height: auto;
-  margin: 32px 0 20px 0;
+  margin: 30px 0 20px 0;
 
   @media (min-width: $tablet-width) {
     grid-row-start: 2;
@@ -230,7 +230,7 @@
 .feature__order-price {
   @include text-bold();
   font-size: 17px;
-  line-height: 24px;
+  line-height: 25px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -244,7 +244,7 @@
 }
 
 .feature__order-btn {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 25px;
   margin-top: 24px;
 }

@@ -8,8 +8,24 @@
   box-sizing: border-box;
   border: 2px $color-grey-text solid;
   font-size: 17px;
-  line-height: 20px;
+  line-height: 25px;
   text-transform: uppercase;
   color: $color-grey-text;
   text-decoration: none;
+
+  &:focus {
+    background-color: $color-grey-text;
+    color: #ffffff;
+  }
+
+  &:hover {
+    background-color: $color-grey-text;
+    color: #ffffff;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-grey-text;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

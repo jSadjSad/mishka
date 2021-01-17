@@ -1,12 +1,46 @@
 .comment {
-  margin: 17px 30px;
+  position: relative;
+  margin: 17px 30px 45px;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    height: 457px;
+    box-sizing: border-box;
+    margin: 0 50px 70px 0;
+    padding: 83px 0 83px 50px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto 67px;
+    padding: 78px 0 83px 175px;
+  }
 }
 
 .comment__title {
   @include text-bold();
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    z-index: 100;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -3px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.comment__list-wrapper {
+  overflow: hidden;
 }
 
 .comment__list {
@@ -14,23 +48,45 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: stretch;
+  margin-left: 0;
 }
 
 .comment__wrapper {
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .comment__text {
   @include text();
   font-size: 15px;
   line-height: 30px;
-  margin: 15px 0 30px;
+  margin: 13px 0 31px;
+
+  @media (min-width: $tablet-width) {
+    height: 155px;
+    margin: 38px 0 24px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 105px;
+    margin: 36px 0 25px;
+    font-size: 17px;
+  }
 }
 
-.comment__author {
+.comment__author-text {
   @include text-bold();
   font-size: 17px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .comment__author-address {
@@ -45,6 +101,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  height: 50px;
   margin-top: 30px;
   border: 1px $color-grey-border solid;
 
@@ -59,24 +116,62 @@
     height: 100%;
     background-color: $color-grey-border;
   }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 56px;
+    width: 175px;
+    height: 40px;
+    margin-top: 0;
+    border: none;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 105px;
+  }
 }
 
 .comment__control-arrow {
   position: relative;
   width: 50%;
-  height: 50px;
   border: 0;
   background-color: transparent;
   margin: 0;
   padding: 0;
+  appearance: none;
 
   &:hover {
     opacity: 0.6;
   }
 
-  &:active :focus {
+  &:active {
     opacity: 0.3;
+  }
+
+  &:focus {
     outline: 0;
+    opacity: 0.6;
+  }
+}
+
+.comment__control-arrow:disabled {
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    opacity: 0.3;
   }
 }
 
@@ -111,5 +206,18 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50px 26px;
+  }
+}
+
+.comment__write-button {
+  margin-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 79px;
+    right: 0;
+    width: 175px;
+    margin: 0;
+    font-size: 17px;
   }
 }

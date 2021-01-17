@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Mishka</title>
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header page-header--closed no--js">
-      <button type="button" class="page-header__toggle page-header__toggle--close">
+    <header class="page-header page-header--closed">
+      <button type="button" class="page-header__toggle page-header__toggle--open">
         <span class="visually-hidden">Открыть-закрыть меню</span>
       </button>
       <div class="page-header__logo">
@@ -24,7 +24,7 @@
       <nav class="page-header__main-nav">
         <ul class="page-header__main-nav-list">
           <li class="page-header__main-nav-item">
-          <a href="#">Каталог&nbsp;товаров</a>
+          <a href="catalogue.html">Каталог&nbsp;товаров</a>
           </li>
           <li class="page-header__main-nav-item">
           <a href="#">Вязание&nbsp;на&nbsp;заказ</a>
@@ -45,7 +45,7 @@
         </form>
         <div class="page-header__cart">
           <div class="page-header__cart-wrapper">
-            <a href="#" class="page-header__cart-button">
+            <a title="В корзину" href="#" class="page-header__cart-button">
               <span class="visually-hidden">В корзину</span>
               <svg class="page-header__cart-icon" width="21" height="18" role="img" aria-label="cart-icon">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -135,7 +135,7 @@
           <p class="feature__order-price">
             Цена: 990 руб.
           </p>
-          <a href="#" class="feature__order-btn btn">
+          <a href="#" class="feature__order-btn btn" tabindex="0">
             Заказать
           </a>
         </div>
@@ -169,25 +169,31 @@
         <h2 class="comment__title">
           Отзывы
         </h2>
-        <div class="comment__list">
-          <article class="comment__wrapper">
-            <p class="comment__text">
-              Я молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как&nbsp;у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!
-            </p>
-            <p class="comment__author">
-              Анастасия Красильникова
-            </p>
-            <a class="comment__author-address" rel="author" href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
-          </article>
-          <article class="comment__wrapper">
-            <p class="comment__text">
-              Второй короткий комментарий
-            </p>
-            <p class="comment__author">
-              Маша Иванова
-            </p>
-            <a rel="author" href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
-          </article>
+        <div class="comment__list-wrapper">
+          <div class="comment__list">
+            <div class="comment__wrapper">
+              <p class="comment__text">
+                Я молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как&nbsp;у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!
+              </p>
+              <div class="comment__author-wrapper">
+                <p class="comment__author-text">
+                  Анастасия Красильникова
+                </p>
+                <a class="comment__author-address" rel="author" href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
+              </div>
+            </div>
+            <div class="comment__wrapper">
+              <p class="comment__text">
+                Очень миленькие корзинки! Очень подходят к&nbsp;моему интерьеру и&nbsp;придают ему необходимую «Изюминку».
+              </p>
+                <div class="comment__author-wrapper">
+                <p class="comment__author-text">
+                  Маша Иванова
+                </p>
+                <a class="comment__author-address" rel="author" href="mailto:mashai@gmail.com">@mashai</a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="comment__controls">
           <button type="button" name="button" class="comment__control-arrow comment__control-arrow--backward">
@@ -201,55 +207,100 @@
             </span>
           </button>
         </div>
-        <a href="#" class="comment__write-button">Написать</a>
+        <a href="#" class="comment__write-button btn">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">
           Контакты
         </h2>
         <div class="contacts__wrapper">
-          <table class="contacts__email">
+          <table class="contacts__text contacts__text--email">
             <tr>
               <td>e-mail:</td>
               <td><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
             </tr>
           </table>
-          <table class="contacts__address">
+          <table class="contacts__text contacts__text--address">
             <tr>
               <td>адрес:</td>
-              <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+              <td>г.&nbsp;Санкт-Петербург,<br>ул.&nbsp;Большая Конюшенная,<br>д.&nbsp;19/8, офис&nbsp;101</td>
             </tr>
           </table>
         </div>
-        <div class="contacts__map"></div>
-        <a href="mailto:info@mimimishkashop.ru">Пишите нам</a>
+        <div class="contacts__map-wrapper">
+          <div class="contacts__map" id="map"></div>
+        </div>
+        <a class="contacts__btn btn" href="mailto:info@mimimishkashop.ru">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <a href="#" class="page-footer__logo">
-        <span class="visually-hidden">Логотип Мишка</span>
+          <img src="img/icon-mishka-logo-footer.svg" width="102" height="34" alt="Логотип Мишка">
       </a>
       <ul class="page-footer__socials socials">
         <li class="socials__item">
-          <a href="#" class="socials__link socials__link--instagram">
-            <span class="visually-hidden">Инстаграм</span>
+          <a href="#" class="socials__link">
+            <svg class="socials__link-instagram" width="22" height="22" role="img" aria-label="Instagram">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
           </a>
         </li>
         <li class="socials__item">
-          <a href="#" class="socials__link socials__link--facebook">
-            <span class="visually-hidden">Фейсбук</span>
+          <a href="#" class="socials__link">
+            <svg class="socials__link-facebook" width="15" height="28" role="img" aria-label="facebook">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
         <li class="socials__item">
-          <a href="#" class="socials__link socials__link--twitter">
-            <span class="visually-hidden">Твиттер</span>
+          <a href="#" class="socials__link">
+            <svg class="socials__link-twitter" width="23" height="20" role="img" aria-label="twitter">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
           </a>
         </li>
       </ul>
       <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright">
         <span class="page-footer__copyright-text">Разработано</span>
+        <svg class="page-footer__copyright-logo" width="27" height="35" role="img" aria-label="Логотип HTMLAcademy">
+          <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
       </a>
     </footer>
+
+    <!-- Модальное окно заказа -->
+    <div class="modal__overlay hidden"></div>
+    <section class="modal modal--order hidden">
+      <h2 class="modal__title">Добавить<br> в&nbsp;корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form action="https://echo.htmlacademy.ru" method="post" class="modal__form-size">
+        <ul class="modal__form-size-list">
+          <li class="modal__form-size-item">
+            <input type="checkbox" name="S-size" id="S-size" class="visually-hidden" autofocus>
+            <label for="S-size"><span class="visually-hidden">Размер</span>S</label>
+          </li>
+          <li class="modal__form-size-item">
+            <input type="checkbox" name="M-size" id="M-size" class="visually-hidden">
+            <label for="M-size"><span class="visually-hidden">Размер</span>M</label>
+          </li>
+          <li class="modal__form-size-item">
+            <input type="checkbox" name="L-size" id="L-size" class="visually-hidden">
+            <label for="L-size"><span class="visually-hidden">Размер</span>L</label>
+          </li>
+        </ul>
+        <button type="submit" class="modal__btn btn btn--modal">Добавить</button>
+      </form>
+      <button class="modal__close" tabindex="0">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+    </section>
+    <!-- // -->
+
     <script src="js/main-nav.js"></script>
+    <script src="js/modal-order.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7DDYLqwgNWhkOSjaggVtmUKLJxZ13dCw&callback=initMap" type="text/javascript"></script>
+
   </body>
 </html>

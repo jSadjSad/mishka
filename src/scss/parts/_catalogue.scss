@@ -1,0 +1,139 @@
+.catalogue {
+  margin: 31px 30px 30px;
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width: $tablet-width) {
+    margin: 68px 50px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 112px auto 50px;
+    width: 1050px;
+  }
+}
+
+.catalogue__list {
+  @include ul();
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.catalogue__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px $color-grey-border solid;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    height: 332px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: 316px;
+    height: auto;
+  }
+}
+
+.catalogue__item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.catalogue__item-image {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 332px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+  }
+}
+
+.catalogue__item-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.catalogue__text-wrapper {
+  padding: 29px 27px 24px;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.catalogue__item-title {
+  @include text-bold();
+  margin-bottom: 5px;
+  font-size: 17px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.catalogue__item-text {
+  @include text();
+  font-size: 13px;
+  line-height: 30px;
+  padding-bottom: 17px;
+}
+
+.catalogue__order-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px $color-grey-border solid;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
+}
+
+.catalogue__item-price {
+  @include text-bold();
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.catalogue__item-cart svg {
+  width: 19px;
+  height: 20px;
+  fill: #000000;
+  opacity: 0.2;
+}
+
+.catalogue__item-cart:hover svg {
+  fill: $color-green-1;
+  opacity: 1;
+}
+
+.catalogue__item-cart:active svg {
+  fill: $color-green-1;
+  opacity: 0.3;
+}

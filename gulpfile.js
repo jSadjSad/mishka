@@ -52,7 +52,7 @@ exports.styles = styles;
 //images
 
 const images = () => {
-  return gulp.src("src/img/**/*.{jpg,png,svg}")
+  return gulp.src("src/img/**/*.{jpg,png,svg,mp4}")
     // .pipe(imagemin([
     //   imagemin.optipng({optimizationLevel: 3}),
     //   imagemin.mozjpeg({quality: 100, progressive: true}),
